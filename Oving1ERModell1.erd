@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram height="700" made_with_version="1.6" name="Default" width="940">
+<entity id="0" is_weak="false" name="Kinosenter" x="185" y="166">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="KinoID" type=""/>
+<attribute is_hidden="false" is_key="false" name="Navn" type=""/>
+<attribute is_hidden="false" is_key="false" name="Telefonnummer" type=""/>
+</attributes>
+</entity>
+<entity id="1" is_weak="true" name="Kinosal" x="191" y="419">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="Salnummer" type=""/>
+<attribute is_hidden="false" is_key="false" name="Kapasitet" type=""/>
+<attribute is_hidden="false" is_key="false" name="KanLeiesUt" type=""/>
+</attributes>
+</entity>
+<entity id="5" is_weak="false" name="Svak attributt" x="90" y="447">
+<attributes/>
+</entity>
+<entity id="6" is_weak="false" name="Filmer" x="413" y="426">
+<attributes>
+<attribute is_hidden="false" is_key="true" name="Filmnummer" type=""/>
+<attribute is_hidden="false" is_key="false" name="Tittel" type=""/>
+<attribute is_hidden="false" is_key="false" name="Varighet" type=""/>
+</attributes>
+</entity>
+<diamond id="2" is_weak="true" name="SalPåSenter" x="217" y="310">
+<attributes/>
+</diamond>
+<diamond id="7" is_weak="false" name="ViseFilm" x="319" y="441">
+<attributes>
+<attribute name="Type" type=""/>
+<attribute name="" type=""/>
+</attributes>
+</diamond>
+<line cardinality_string="(1,n)" has_u="false" id="3" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="3" direction="1" object_id="0" relation_point_x="233" relation_point_y="238"/>
+<connection connection_side="1" direction="1" object_id="2" relation_point_x="233" relation_point_y="310"/>
+</line>
+<line cardinality_string="(1,1)" has_u="false" id="4" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="1" direction="1" object_id="1" relation_point_x="232" relation_point_y="419"/>
+<connection connection_side="3" direction="1" object_id="2" relation_point_x="233" relation_point_y="342"/>
+</line>
+<line cardinality_string="(0,n)" has_u="false" id="8" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="0" direction="0" object_id="6" relation_point_x="413" relation_point_y="462"/>
+<connection connection_side="2" direction="0" object_id="7" relation_point_x="351" relation_point_y="457"/>
+</line>
+<line cardinality_string="" has_u="false" id="9" is_weak="false" role="" style="0" turned="false">
+<connection connection_side="2" direction="0" object_id="1" relation_point_x="272" relation_point_y="459"/>
+<connection connection_side="0" direction="0" object_id="7" relation_point_x="319" relation_point_y="457"/>
+</line>
+</diagram>
